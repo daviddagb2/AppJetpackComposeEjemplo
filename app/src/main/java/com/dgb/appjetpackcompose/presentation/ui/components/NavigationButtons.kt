@@ -38,6 +38,14 @@ fun NavigationButtons(
 
         Button(
             onClick = {
+                navigationActions.navigateToContacts()
+            }
+        ) {
+            Text("Contactos")
+        }
+
+        Button(
+            onClick = {
                 navigationActions.navigateToSeries()
             }
         ) {

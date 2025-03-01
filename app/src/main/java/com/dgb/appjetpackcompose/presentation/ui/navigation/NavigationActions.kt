@@ -12,6 +12,10 @@ class NavigationActions(private val navController: NavController) {
         navController.navigate(AppScreens.AboutUsScreen.route)
     }
 
+    fun navigateToContacts() {
+        navController.navigate(AppScreens.ContactScreen.route)
+    }
+
     fun navigateToSeries() {
         navController.navigate(AppScreens.SeriesScreen.route)
     }

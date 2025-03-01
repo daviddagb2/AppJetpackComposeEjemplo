@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.dgb.appjetpackcompose.presentation.ui.view.AboutUsScreen
+import com.dgb.appjetpackcompose.presentation.ui.view.ContactScreen
 import com.dgb.appjetpackcompose.presentation.ui.view.MainScreen
 import com.dgb.appjetpackcompose.presentation.ui.view.SeriesScreen
 
@@ -29,6 +30,10 @@ fun AppNavigation(){
 
         composable(AppScreens.SeriesScreen.route) {
             SeriesScreen(navigationActions)
+        }
+
+        composable(AppScreens.ContactScreen.route) {
+            ContactScreen(navigationActions)
         }
 
     }
