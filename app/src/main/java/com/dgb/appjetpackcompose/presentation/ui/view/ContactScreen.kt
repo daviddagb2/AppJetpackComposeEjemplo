@@ -1,5 +1,6 @@
 package com.dgb.appjetpackcompose.presentation.ui.view
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -37,6 +38,7 @@ fun ContactScreen(
     }
 }
 
+@SuppressLint("SuspiciousIndentation")
 @Composable
 fun ContactMainScreen(modifier: Modifier = Modifier){
 

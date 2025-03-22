@@ -8,6 +8,11 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CardElevation
+import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -22,16 +27,16 @@ import com.dgb.appjetpackcompose.domain.models.MyMessage
 @Composable
 fun ContactComponent(message: MyMessage){
     val estiloCaja = Modifier
-        .padding(vertical = 5.dp)
+        .padding(4.dp)
         .fillMaxWidth()
-        .height(60.dp)
-        .background(Color.LightGray)
-        .border(1.dp, Color.Black, shape = RoundedCornerShape(2.dp))
+        .padding(8.dp)
 
 
-    Box(
+    OutlinedCard(
         modifier = estiloCaja,
-        contentAlignment = Alignment.CenterStart
+        elevation = CardDefaults.cardElevation(
+            defaultElevation = 6.dp
+        ),
     ){
         Column(
             modifier = Modifier.padding(horizontal = 20.dp)
@@ -42,12 +47,17 @@ fun ContactComponent(message: MyMessage){
                     fontSize = 20.sp
                 )
             )
+
+            Box(modifier = Modifier.height(10.dp))
+
             Text(
                 message.body,
                 style = TextStyle(
                     fontSize = 14.sp
                 )
             )
+
+            Box(modifier = Modifier.height(3.dp))
         }
     }
 }
